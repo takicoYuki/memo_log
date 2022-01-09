@@ -10,6 +10,7 @@ while(true){
     echo '2:メモログを表示する'.PHP_EOL;
     echo '0:メニューを閉じる'.PHP_EOL;
     echo 'メニューを選択してください:';
+
     $num = trim(fgets(STDIN));
 
     //メモログを登録する
@@ -33,9 +34,11 @@ while(true){
 */
 function crateMemoLog(){
     echo 'メモを登録します。'.PHP_EOL;
-    echo 'カテゴリー:'.$category = trim(fgets(STDIN));
-    echo 'メモ内容:'.$memo = fgets(STDIN);
-    $yyyymmdd_HIS = date("YYYY/MM/DD H:i:s");
+    echo 'カテゴリー:';
+    $category = trim(fgets(STDIN));
+    echo 'メモ内容:';
+    $memo = fgets(STDIN);
+    $yyyymmdd_HIS = date("Y/M/D H:i:s");
     echo '----------------------------'.PHP_EOL;
     return [
         'date'=>$yyyymmdd_HIS,
